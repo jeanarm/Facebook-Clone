@@ -6,16 +6,19 @@
 
 
     <% @blogs.each do |blog| %>
-      
-       <p> <%= blog.content %></p>
+     
+       <p><i class="fas fa-user-tie"></i> <%= blog.user.name %>:</p>
+       <p><i class="fas fa-comment-alt"></i> <%= blog.content %></p>
+
        <p><%= image_tag blog.image.url, class: "image" %></p>
-       <p><%= blog.user.name %></p>
-        <%= link_to 'Show', blog %>
-       <%= link_to 'Edit', edit_blog_path(blog) %>
-        <%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %>
-      
+       
+       <button type="button" class="btn btn-light"><%= link_to 'Show', blog %></button>
+       <button type="button" class="btn btn-warning"><%= link_to 'Edit', edit_blog_path(blog) %></button>
+       
+       <button type="button" class="btn btn-danger">  <%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+       
     <% end %>
 
 <br>
+<p style="padding-top:2rem"><button type="button" class="btn btn-info"><%= link_to 'New Blog', new_blog_path %></button></p>
 
-<%= link_to 'New Blog', new_blog_path %>

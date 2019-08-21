@@ -14,6 +14,7 @@
   <strong>User:</strong>
   <%= @blog.user.name %>
 </p>
+<button type="button" class="btn btn-success"><%= link_to 'Confirm', blogs_path %> </button>
+<button type="button" class="btn btn-dark"><%= link_to 'Back', edit_blog_path(@blog)%></button>
 
-<%= link_to 'Edit', edit_blog_path(@blog) %> |
-<%= link_to 'Back', blogs_path %>
+
