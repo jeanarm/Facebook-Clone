@@ -10,7 +10,7 @@
        <p><i class="fas fa-user-tie"></i> <%= blog.user.name %>:</p>
        <p><i class="fas fa-comment-alt"></i> <%= blog.content %></p>
 
-       <p><%= image_tag blog.image.url %></p>
+       <p><%= blog.image %></p>
        
        <button type="button" class="btn btn-light"><%= link_to 'Show', blog %></button>
        <button type="button" class="btn btn-warning"><%= link_to 'Edit', edit_blog_path(blog) %></button>
