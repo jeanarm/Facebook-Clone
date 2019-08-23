@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html>
   <head>
     <title>FacebookClone</title>
@@ -12,9 +11,7 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body class="body">
-
   <!-- A grey horizontal navbar that becomes vertical on small screens -->
   <nav class="navbar navbar-expand-sm" style="background-color:blue;">
   
@@ -29,8 +26,7 @@
       <li class="nav-item">
         <a class="nav-link" style="color:white" <%= link_to 'New Post', new_blog_path %></a>
       </li>
-      <li class="item"> <input type="text" name="search" placeholder="search friend"/> <i class="fas fa-search"></i>    </li>
-    
+      <li class="item"> <input type="text" name="search" placeholder="search friend"/> <i class="fas fa-search"></i></li>
   <li class="item"><i class="fas fa-users"></i></li>
   <li class="item"><i class="fas fa-user-circle"></i></li>
   <li class="item"><i class="far fa-bell"></i></li>
@@ -43,27 +39,18 @@
   <% if logged_in? %>
   <p> Welcome, <%=current_user.name %> <br>
   <button type="button" class="btn btn-primary"><%= link_to "Profile", user_path(current_user.id) %></button>
- 
 <button type="button" class="btn btn-danger"><%= link_to "Logout", session_path(current_user.id), method: :delete %></button>
-
-
   <% else %>
   <button type="button" class="btn btn-primary"><%= link_to "Sign up", new_user_path %></button>
-
   <button type="button" class="btn btn-success"><%= link_to "Login", new_session_path %></button>
- 
   <% end %>
  <br>
-   
     <p style="padding-top:2rem"><a style="color:blue" <%= link_to 'What is in your mind?', new_blog_path%></a></p><br>
-
     <p style="color:blue">
     <i class="far fa-comments"> </i> Chats
     <i class="fas fa-users"> </i> Friends
     <i class="fas fa-calendar-alt"> </i> Upcoming Events
     </p>
-
-
     <div class="card-deck">
   <div class="card bg-warning">
     <div class="card-body text-center" style="background-color:white">
